@@ -20,7 +20,7 @@ const routes = [
 ));
 function App() {
   return (
-    <div className="font-redhat">
+    <div className="font-inter">
       <ThemeProvider>
         <Background>
           <Router>
