@@ -2,12 +2,16 @@
 /* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable react/no-array-index-key */
 import React, { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 import MenuItem from '../../components/MenuItem';
 import Navbar from '../../components/Navbar';
+import CustomButtonGroupAsArrows from '../../components/CustomButtonGroupAsArrows';
 import { ThemeContext } from '../../context/themeContext';
-
 // extra styles
 import '../../App.css';
+import Footer from '../../components/Footer';
 
 const menuItems = {
   Top: 'Home',
@@ -17,6 +21,30 @@ const menuItems = {
   Section4: 'Team',
   Section5: 'Contact Us',
 };
+
+const interiors = [
+  {
+    title: 'Staircase',
+    image_url: 'https://images.unsplash.com/photo-1589910511971-a90edfbbb343?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
+    link: '/blog/article/2',
+  },
+  {
+    title: 'Kitchens',
+    image_url: 'https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
+    link: '/blog/article/2',
+  },
+  {
+    title: 'Living Rooms',
+    image_url: 'https://images.unsplash.com/photo-1585264550534-7890a89b7270?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
+    link: '/blog/article/2',
+  },
+  {
+    title: 'Bed Rooms',
+    image_url: 'https://images.unsplash.com/photo-1591079381491-cb2c19ce7f15?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
+    link: '/blog/article/2',
+  },
+];
+
 const Home = () => {
   const { theme } = useContext(ThemeContext);
   // eslint-disable-next-line no-unused-vars
@@ -31,8 +59,8 @@ const Home = () => {
         <h1 className="text-5xl font-semibold">Home</h1>
         <section>
           <div className="md:px-20">
-            <h1 className="text-9xl font-semibold text-snowgrey">Our Projects</h1>
-            <h1 className="text-5xl font-bold text-cedarland">
+            <h1 className="text-9xl font-semibold text-snowgrey dark:text-gray-800">Our Projects</h1>
+            <h1 className="text-5xl font-bold text-cedarlanddark: text-white">
               Here are some projects that
               <br />
               we take real pride in
@@ -80,83 +108,227 @@ const Home = () => {
         </section>
         <section>
           <div className="md:py-40">
-            <h1 className="text-9xl font-semibold text-snowgrey">Recently Completed</h1>
-            <div>
-              <h1 className="text-4xl font-bold text-cedarland">
-                Our recently
-                <br />
-                completed project
-              </h1>
+            <div className="md:px-20 px-5">
+              <h1 className="text-8xl font-semibold text-snowgrey dark:text-gray-800 pb-5 md:pb-10">Recently Completed</h1>
+              <div className="bg-lightestbrown md:w-840px dark:bg-kiwi md:px-12 md:py-12">
+                <h1 className="text-4xl font-bold text-cedarland dark:text-white">
+                  Our recently
+                  <br />
+                  completed project
+                </h1>
+              </div>
             </div>
-            <div className="md:flex pt-5 md:pt-12">
+            <div className="md:flex">
               <div className="md:w-1/2 md:flex">
                 <div className="flex-1">
                   <div className="relative recentcard">
                     <img
                       className="h-275px w-full object-cover"
                       src="https://images.pexels.com/photos/87223/pexels-photo-87223.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                      alt="house construcion"
+                      alt="house construction"
                     />
                     <div className="absolute h-full w-full top-0 recentoverlay">
-                      <div className="flex items-center space-x-4 link-holder">
+                      <div className="link-holder">
                         <h1>Skyscrapers</h1>
-                        <a href="a" className="flex justify-center items-center bg-white h-10 w-10 rounded-full">
-                          <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fillRule="evenodd" clipRule="evenodd" d="M1.5625 12.5C1.5625 12.2928 1.64481 12.0941 1.79132 11.9476C1.93784 11.8011 2.13655 11.7188 2.34375 11.7188H20.7703L15.8531 6.80314C15.7064 6.65644 15.624 6.45747 15.624 6.25001C15.624 6.04255 15.7064 5.84358 15.8531 5.69689C15.9998 5.55019 16.1988 5.46777 16.4063 5.46777C16.6137 5.46777 16.8127 5.55019 16.9594 5.69689L23.2094 11.9469C23.2821 12.0195 23.3399 12.1057 23.3792 12.2006C23.4186 12.2955 23.4389 12.3972 23.4389 12.5C23.4389 12.6028 23.4186 12.7045 23.3792 12.7994C23.3399 12.8943 23.2821 12.9806 23.2094 13.0531L16.9594 19.3031C16.8127 19.4498 16.6137 19.5322 16.4063 19.5322C16.1988 19.5322 15.9998 19.4498 15.8531 19.3031C15.7064 19.1564 15.624 18.9575 15.624 18.75C15.624 18.5425 15.7064 18.3436 15.8531 18.1969L20.7703 13.2813H2.34375C2.13655 13.2813 1.93784 13.1989 1.79132 13.0524C1.64481 12.9059 1.5625 12.7072 1.5625 12.5V12.5Z" fill="black" />
-                          </svg>
-                        </a>
+                        <div className="flex justify-end">
+                          <a href="a" className="flex justify-center items-center bg-white h-10 w-10 rounded-full">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fillRule="evenodd" clipRule="evenodd" d="M0.9375 7.5001C0.9375 7.37578 0.986886 7.25655 1.07479 7.16865C1.1627 7.08074 1.28193 7.03135 1.40625 7.03135H12.4622L9.51188 4.08198C9.42386 3.99396 9.37441 3.87458 9.37441 3.7501C9.37441 3.62563 9.42386 3.50625 9.51188 3.41823C9.59989 3.33021 9.71927 3.28076 9.84375 3.28076C9.96823 3.28076 10.0876 3.33021 10.1756 3.41823L13.9256 7.16823C13.9693 7.21177 14.0039 7.2635 14.0275 7.32045C14.0512 7.3774 14.0633 7.43845 14.0633 7.5001C14.0633 7.56176 14.0512 7.62281 14.0275 7.67976C14.0039 7.73671 13.9693 7.78844 13.9256 7.83198L10.1756 11.582C10.0876 11.67 9.96823 11.7194 9.84375 11.7194C9.71927 11.7194 9.59989 11.67 9.51188 11.582C9.42386 11.494 9.37441 11.3746 9.37441 11.2501C9.37441 11.1256 9.42386 11.0062 9.51188 10.9182L12.4622 7.96885H1.40625C1.28193 7.96885 1.1627 7.91947 1.07479 7.83156C0.986886 7.74365 0.9375 7.62442 0.9375 7.5001V7.5001Z" fill="#603831" />
+                            </svg>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div className="relative">
+                  <div className="relative recentcard">
                     <img
                       className="h-275px w-full object-cover"
                       src="https://images.pexels.com/photos/380330/pexels-photo-380330.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                      alt="house construcion"
+                      alt="house construction"
                     />
-                    <div className="absolute h-full w-full top-0 bg-black bg-opacity-40">s</div>
+                    <div className="absolute h-full w-full top-0 recentoverlay">
+                      <div className="link-holder">
+                        <h1>Duplex</h1>
+                        <div className="flex justify-end">
+                          <a href="a" className="flex justify-center items-center bg-white h-10 w-10 rounded-full">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fillRule="evenodd" clipRule="evenodd" d="M0.9375 7.5001C0.9375 7.37578 0.986886 7.25655 1.07479 7.16865C1.1627 7.08074 1.28193 7.03135 1.40625 7.03135H12.4622L9.51188 4.08198C9.42386 3.99396 9.37441 3.87458 9.37441 3.7501C9.37441 3.62563 9.42386 3.50625 9.51188 3.41823C9.59989 3.33021 9.71927 3.28076 9.84375 3.28076C9.96823 3.28076 10.0876 3.33021 10.1756 3.41823L13.9256 7.16823C13.9693 7.21177 14.0039 7.2635 14.0275 7.32045C14.0512 7.3774 14.0633 7.43845 14.0633 7.5001C14.0633 7.56176 14.0512 7.62281 14.0275 7.67976C14.0039 7.73671 13.9693 7.78844 13.9256 7.83198L10.1756 11.582C10.0876 11.67 9.96823 11.7194 9.84375 11.7194C9.71927 11.7194 9.59989 11.67 9.51188 11.582C9.42386 11.494 9.37441 11.3746 9.37441 11.2501C9.37441 11.1256 9.42386 11.0062 9.51188 10.9182L12.4622 7.96885H1.40625C1.28193 7.96885 1.1627 7.91947 1.07479 7.83156C0.986886 7.74365 0.9375 7.62442 0.9375 7.5001V7.5001Z" fill="#603831" />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="flex-1 relative">
-                  <img
-                    className="md:h-550px h-275px w-full object-cover"
-                    src="https://images.pexels.com/photos/1974596/pexels-photo-1974596.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                    alt="house construcion"
-                  />
-                  <div className="absolute h-full w-full bg-black bg-opacity-40 top-0">s</div>
+                  <div className="recentcard relative">
+                    <img
+                      className="md:h-550px h-275px w-full object-cover"
+                      src="https://images.pexels.com/photos/1974596/pexels-photo-1974596.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                      alt="house construcion"
+                    />
+                    <div className="absolute h-full w-full top-0 recentoverlay">
+                      <div className="link-holder">
+                        <h1>Bungalows</h1>
+                        <div className="flex justify-end">
+                          <a href="a" className="flex justify-center items-center bg-white h-10 w-10 rounded-full">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fillRule="evenodd" clipRule="evenodd" d="M0.9375 7.5001C0.9375 7.37578 0.986886 7.25655 1.07479 7.16865C1.1627 7.08074 1.28193 7.03135 1.40625 7.03135H12.4622L9.51188 4.08198C9.42386 3.99396 9.37441 3.87458 9.37441 3.7501C9.37441 3.62563 9.42386 3.50625 9.51188 3.41823C9.59989 3.33021 9.71927 3.28076 9.84375 3.28076C9.96823 3.28076 10.0876 3.33021 10.1756 3.41823L13.9256 7.16823C13.9693 7.21177 14.0039 7.2635 14.0275 7.32045C14.0512 7.3774 14.0633 7.43845 14.0633 7.5001C14.0633 7.56176 14.0512 7.62281 14.0275 7.67976C14.0039 7.73671 13.9693 7.78844 13.9256 7.83198L10.1756 11.582C10.0876 11.67 9.96823 11.7194 9.84375 11.7194C9.71927 11.7194 9.59989 11.67 9.51188 11.582C9.42386 11.494 9.37441 11.3746 9.37441 11.2501C9.37441 11.1256 9.42386 11.0062 9.51188 10.9182L12.4622 7.96885H1.40625C1.28193 7.96885 1.1627 7.91947 1.07479 7.83156C0.986886 7.74365 0.9375 7.62442 0.9375 7.5001V7.5001Z" fill="#603831" />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="md:w-1/2 md:flex">
                 <div className="flex-1">
-                  <div className="relative">
+                  <div className="recentcard relative">
                     <img
-                      className="h-275px w-full object-cover"
-                      src="https://images.pexels.com/photos/245208/pexels-photo-245208.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                      className="md:h-275px h-275px w-full object-cover"
+                      src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
                       alt="house construcion"
                     />
-                    <div className="absolute h-full w-full bg-black bg-opacity-40 top-0">s</div>
+                    <div className="absolute h-full w-full top-0 recentoverlay">
+                      <div className="link-holder">
+                        <h1>Office Complex</h1>
+                        <div className="flex justify-end">
+                          <a href="a" className="flex justify-center items-center bg-white h-10 w-10 rounded-full">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fillRule="evenodd" clipRule="evenodd" d="M0.9375 7.5001C0.9375 7.37578 0.986886 7.25655 1.07479 7.16865C1.1627 7.08074 1.28193 7.03135 1.40625 7.03135H12.4622L9.51188 4.08198C9.42386 3.99396 9.37441 3.87458 9.37441 3.7501C9.37441 3.62563 9.42386 3.50625 9.51188 3.41823C9.59989 3.33021 9.71927 3.28076 9.84375 3.28076C9.96823 3.28076 10.0876 3.33021 10.1756 3.41823L13.9256 7.16823C13.9693 7.21177 14.0039 7.2635 14.0275 7.32045C14.0512 7.3774 14.0633 7.43845 14.0633 7.5001C14.0633 7.56176 14.0512 7.62281 14.0275 7.67976C14.0039 7.73671 13.9693 7.78844 13.9256 7.83198L10.1756 11.582C10.0876 11.67 9.96823 11.7194 9.84375 11.7194C9.71927 11.7194 9.59989 11.67 9.51188 11.582C9.42386 11.494 9.37441 11.3746 9.37441 11.2501C9.37441 11.1256 9.42386 11.0062 9.51188 10.9182L12.4622 7.96885H1.40625C1.28193 7.96885 1.1627 7.91947 1.07479 7.83156C0.986886 7.74365 0.9375 7.62442 0.9375 7.5001V7.5001Z" fill="#603831" />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="relative">
+                  <div className="recentcard relative">
                     <img
-                      className="h-275px w-full object-cover"
-                      src="https://images.pexels.com/photos/1571462/pexels-photo-1571462.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                      className="md:h-275px h-275px w-full object-cover"
+                      src="https://images.unsplash.com/photo-1612819052456-2feb4c6f81ed?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80"
                       alt="house construcion"
                     />
-                    <div className="absolute h-full w-full bg-black bg-opacity-40 top-0">s</div>
+                    <div className="absolute h-full w-full top-0 recentoverlay">
+                      <div className="link-holder">
+                        <h1>Shopping Complex</h1>
+                        <div className="flex justify-end">
+                          <a href="a" className="flex justify-center items-center bg-white h-10 w-10 rounded-full">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fillRule="evenodd" clipRule="evenodd" d="M0.9375 7.5001C0.9375 7.37578 0.986886 7.25655 1.07479 7.16865C1.1627 7.08074 1.28193 7.03135 1.40625 7.03135H12.4622L9.51188 4.08198C9.42386 3.99396 9.37441 3.87458 9.37441 3.7501C9.37441 3.62563 9.42386 3.50625 9.51188 3.41823C9.59989 3.33021 9.71927 3.28076 9.84375 3.28076C9.96823 3.28076 10.0876 3.33021 10.1756 3.41823L13.9256 7.16823C13.9693 7.21177 14.0039 7.2635 14.0275 7.32045C14.0512 7.3774 14.0633 7.43845 14.0633 7.5001C14.0633 7.56176 14.0512 7.62281 14.0275 7.67976C14.0039 7.73671 13.9693 7.78844 13.9256 7.83198L10.1756 11.582C10.0876 11.67 9.96823 11.7194 9.84375 11.7194C9.71927 11.7194 9.59989 11.67 9.51188 11.582C9.42386 11.494 9.37441 11.3746 9.37441 11.2501C9.37441 11.1256 9.42386 11.0062 9.51188 10.9182L12.4622 7.96885H1.40625C1.28193 7.96885 1.1627 7.91947 1.07479 7.83156C0.986886 7.74365 0.9375 7.62442 0.9375 7.5001V7.5001Z" fill="#603831" />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="flex-1 relative">
-                  <img
-                    className="md:h-550px w-full object-cover"
-                    src="https://images.pexels.com/photos/462235/pexels-photo-462235.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                    alt="house construcion"
-                  />
-                  <div className="absolute h-full w-full bg-black bg-opacity-40 top-0">s</div>
+                  <div className="recentcard relative">
+                    <img
+                      className="md:h-550px h-275px w-full object-cover"
+                      src="https://images.unsplash.com/photo-1518733057094-95b53143d2a7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=630&q=80"
+                      alt="house construcion"
+                    />
+                    <div className="absolute h-full w-full top-0 recentoverlay">
+                      <div className="link-holder">
+                        <h1>Hotels</h1>
+                        <div className="flex justify-end">
+                          <a href="a" className="flex justify-center items-center bg-white h-10 w-10 rounded-full">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fillRule="evenodd" clipRule="evenodd" d="M0.9375 7.5001C0.9375 7.37578 0.986886 7.25655 1.07479 7.16865C1.1627 7.08074 1.28193 7.03135 1.40625 7.03135H12.4622L9.51188 4.08198C9.42386 3.99396 9.37441 3.87458 9.37441 3.7501C9.37441 3.62563 9.42386 3.50625 9.51188 3.41823C9.59989 3.33021 9.71927 3.28076 9.84375 3.28076C9.96823 3.28076 10.0876 3.33021 10.1756 3.41823L13.9256 7.16823C13.9693 7.21177 14.0039 7.2635 14.0275 7.32045C14.0512 7.3774 14.0633 7.43845 14.0633 7.5001C14.0633 7.56176 14.0512 7.62281 14.0275 7.67976C14.0039 7.73671 13.9693 7.78844 13.9256 7.83198L10.1756 11.582C10.0876 11.67 9.96823 11.7194 9.84375 11.7194C9.71927 11.7194 9.59989 11.67 9.51188 11.582C9.42386 11.494 9.37441 11.3746 9.37441 11.2501C9.37441 11.1256 9.42386 11.0062 9.51188 10.9182L12.4622 7.96885H1.40625C1.28193 7.96885 1.1627 7.91947 1.07479 7.83156C0.986886 7.74365 0.9375 7.62442 0.9375 7.5001V7.5001Z" fill="#603831" />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+        <section className="bg dark:bg-kiwi">
+          <div className="px-5 md:pl-16 md:py-40 py-32">
+            <h1 className="text-9xl font-semibold text-snowgrey dark:text-gray-800">Interior Design</h1>
+            <h1 className="md:text-6xl font-semibold text-gray dark:text-gray-300 md:py-8 py-5">More on Interior Design</h1>
+            <div className="relative">
+              <Carousel
+                additionalTransfrom={0}
+                arrows={false}
+                autoPlaySpeed={3000}
+                centerMode
+                className=""
+                containerClass="container-padding-bottom"
+                customButtonGroup={<CustomButtonGroupAsArrows />}
+                dotListClass=""
+                draggable
+                focusOnSelect={false}
+                infinite
+                itemClass="md:ml-5 pb-20"
+                keyBoardControl
+                minimumTouchDrag={80}
+                renderButtonGroupOutside
+                renderDotsOutside={false}
+                responsive={{
+                  desktop: {
+                    breakpoint: {
+                      max: 3000,
+                      min: 1024,
+                    },
+                    items: 4,
+                    partialVisibilityGutter: 30,
+                  },
+                  mobile: {
+                    breakpoint: {
+                      max: 464,
+                      min: 0,
+                    },
+                    items: 1,
+                    partialVisibilityGutter: 30,
+                  },
+                  tablet: {
+                    breakpoint: {
+                      max: 1024,
+                      min: 464,
+                    },
+                    items: 2,
+                    partialVisibilityGutter: 30,
+                  },
+                }}
+                showDots={false}
+                sliderClass=""
+                slidesToSlide={1}
+                swipeable
+              >
+                {interiors?.map((interior) => (
+                  <div className="bg-white md:w-306px customshadow rounded-2xl dark:bg-kiwi">
+                    <img
+                      className="md:h-350px w-full object-cover rounded-tl-2xl rounded-tr-2xl"
+                      src={interior.image_url}
+                      alt="people"
+                    />
+                    <div className="md:px-10 px-5 py-6">
+                      <Link to={interior.link} className="block text-24px text-cedarland font-bold pt-2 dark:text-white hover:text-sparkchoco">
+                        {interior.title}
+                      </Link>
+                      <div className="">
+                        <Link to={interior.link} className="flex space-x-3 items-center mt-4 text-slidertext1" type="button">
+                          <span>View all samples</span>
+                          <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="#9593A4" />
+                          </svg>
+                        </Link>
+                      </div>
+                    </div>
+
+                  </div>
+                ))}
+              </Carousel>
+            </div>
+          </div>
+        </section>
+        <Footer />
       </div>
     </>
   );

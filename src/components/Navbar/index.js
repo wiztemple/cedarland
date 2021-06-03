@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../context/themeContext';
-import Logo from '../../assets/images/logo.jpeg';
+import Logo from '../../assets/images/logo.jpg';
 import ThemeButton from '../ThemeButton';
 
 const menuItems = {};
