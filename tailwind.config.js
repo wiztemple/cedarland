@@ -13,7 +13,7 @@ module.exports = {
         purplegray: '#616681',
         lightestbrown: '#FDF8F8',
         slidertext1: ' #9593A4',
-        gray: '#A7A9AF',
+        gray1: '#A7A9AF',
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],

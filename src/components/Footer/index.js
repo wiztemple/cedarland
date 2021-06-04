@@ -8,10 +8,10 @@ const Footer = () => {
   const { theme } = useContext(ThemeContext);
   return (
     <div>
-      <div className="md:flex">
+      <div className="md:flex border-t border-white dark:border-gray-800">
         <div className="md:w-1/2 bg-milkgrey dark:bg-gray-900">
-          <div className="md:p-20">
-            <h1 className="text-4xl font-medium dark:text-white">
+          <div className="md:py-20 md:px-20 px-5 py-10">
+            <h1 className="md:text-4xl text-xl font-medium dark:text-white">
               Need help with
               <br />
               We Love to talk with you!
@@ -20,7 +20,7 @@ const Footer = () => {
               Lets hear about it,
               <span className="text-sparkchoco"> contact us</span>
             </p>
-            <div className="flex space-x-3 md:space-x-5 md:py-20">
+            <div className="flex space-x-3 md:space-x-5 md:py-20 py-10">
               <a href="5">
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M15 0C6.71617 0 0 6.75672 0 15.0906C0 22.6215 5.48455 28.8636 12.6568 30V19.4537H8.84639V15.0906H12.6568V11.7658C12.6568 7.98068 14.8965 5.89345 18.3213 5.89345C19.9625 5.89345 21.6817 6.18775 21.6817 6.18775V9.89888H19.7855C17.9253 9.89888 17.3432 11.064 17.3432 12.2578V15.0875H21.5002L20.8356 19.4507H17.3432V29.997C24.5155 28.8666 30 22.623 30 15.0906C30 6.75672 23.2838 0 15 0Z" fill={theme === 'light' ? 'black' : 'white'} />
@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="md:w-1/2 bg-milkpurple dark:bg-gray-800">
-          <div className="md:p-20">
+          <div className="md:py-20 md:px-20 px-5 py-10">
             <img className="block w-20 h-16 0bject-cover rounded-lg" src={Logo} alt="logo" />
             <div className="pt-10">
               <p className="text-purplegray dark:text-gray-300">
@@ -54,7 +54,7 @@ const Footer = () => {
                 We build everlasting homes for dear customers.
               </p>
             </div>
-            <div className="md:flex md:pt-16">
+            <div className="md:flex md:pt-16 pt-8">
               <div className="flex-1">
                 <h1 className="text-24px font-semibold uppercase text-cedarland">OUR PROJECTS</h1>
                 <div className="pt-2">
@@ -64,7 +64,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex-1">
-                <h1 className="text-24px font-semibold uppercase text-cedarland">SOCIALS</h1>
+                <h1 className="text-24px font-semibold uppercase text-cedarland pt-8 md:pt-0">SOCIALS</h1>
               </div>
             </div>
             <p className="text-purplegray dark:text-gray-300 md:pt-16 pt-8">Copyright © 2021 Cedarland. All rights reserved.</p>

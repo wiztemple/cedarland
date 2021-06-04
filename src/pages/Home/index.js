@@ -58,19 +58,19 @@ const Home = () => {
         <Navbar menuList={menuList} />
         <h1 className="text-5xl font-semibold">Home</h1>
         <section>
-          <div className="md:px-20">
-            <h1 className="text-9xl font-semibold text-snowgrey dark:text-gray-800">Our Projects</h1>
-            <h1 className="text-5xl font-bold text-cedarlanddark: text-white">
+          <div className="md:px-20 px-5">
+            <h1 className="md:text-9xl text-5xl font-semibold text-snowgrey dark:text-gray-800">Our Projects</h1>
+            <h1 className="md:text-5xl text-4xl pt-5 md:pt-0 font-bold text-cedarlanddark: text-white">
               Here are some projects that
               <br />
               we take real pride in
             </h1>
-            <div className="md:flex md:space-x-6 pt-5 md:pt-12 md:h-562px w-full">
+            <div className="md:flex md:space-x-6 space-y-6 md:space-y-0 pt-5 md:pt-12 md:h-562px w-full">
               <div className="md:w-1/2 h-full">
                 <img className="md:h-full w-full rounded-lg object-cover" src="https://images.pexels.com/photos/2227832/pexels-photo-2227832.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="house construcion" />
               </div>
               <div className="md:w-1/2 h-full flex-col flex items-stretch">
-                <div className="md:flex md:space-x-6 ">
+                <div className="md:flex md:space-x-6 space-y-6 md:space-y-0">
                   <div className="">
                     <img
                       src="https://images.pexels.com/photos/534220/pexels-photo-534220.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
@@ -86,7 +86,7 @@ const Home = () => {
                     />
                   </div>
                 </div>
-                <div className="md:flex md:space-x-6 mt-6">
+                <div className="md:flex md:space-x-6 space-y-6 md:space-y-0 mt-6">
                   <div className="">
                     <img
                       src="https://images.pexels.com/photos/53610/large-home-residential-house-architecture-53610.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
@@ -107,11 +107,11 @@ const Home = () => {
           </div>
         </section>
         <section>
-          <div className="md:py-40">
+          <div className="md:py-40 py-20">
             <div className="md:px-20 px-5">
-              <h1 className="text-8xl font-semibold text-snowgrey dark:text-gray-800 pb-5 md:pb-10">Recently Completed</h1>
+              <h1 className="md:text-8xl text-5xl font-semibold text-snowgrey dark:text-gray-800 pb-5 md:pb-10">Recently Completed</h1>
               <div className="bg-lightestbrown md:w-840px dark:bg-kiwi md:px-12 md:py-12">
-                <h1 className="text-4xl font-bold text-cedarland dark:text-white">
+                <h1 className="md:text-4xl text-2xl pb-6 md:pb-0 font-bold text-cedarland dark:text-white">
                   Our recently
                   <br />
                   completed project
@@ -249,8 +249,8 @@ const Home = () => {
           </div>
         </section>
         <section className="bg dark:bg-kiwi">
-          <div className="px-5 md:pl-16 md:py-40 py-32">
-            <h1 className="text-9xl font-semibold text-snowgrey dark:text-gray-800">Interior Design</h1>
+          <div className="px-5 md:px-16 md:py-40 py-32">
+            <h1 className="md:text-9xl text-5xl font-semibold text-snowgrey dark:text-gray-800">Interior Design</h1>
             <h1 className="md:text-6xl font-semibold text-gray dark:text-gray-300 md:py-8 py-5">More on Interior Design</h1>
             <div className="relative">
               <Carousel
@@ -276,7 +276,7 @@ const Home = () => {
                       max: 3000,
                       min: 1024,
                     },
-                    items: 4,
+                    items: 3,
                     partialVisibilityGutter: 30,
                   },
                   mobile: {
@@ -292,7 +292,7 @@ const Home = () => {
                       max: 1024,
                       min: 464,
                     },
-                    items: 2,
+                    items: 1,
                     partialVisibilityGutter: 30,
                   },
                 }}
@@ -302,7 +302,7 @@ const Home = () => {
                 swipeable
               >
                 {interiors?.map((interior) => (
-                  <div className="bg-white md:w-306px customshadow rounded-2xl dark:bg-kiwi">
+                  <div className="bg-white customshadow rounded-2xl dark:bg-gray-800">
                     <img
                       className="md:h-350px w-full object-cover rounded-tl-2xl rounded-tr-2xl"
                       src={interior.image_url}
