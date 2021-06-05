@@ -264,7 +264,7 @@ const Home = () => {
                 <div className="md:flex md:space-x-6 space-y-6 md:space-y-0">
                   <div className="relative">
                     <img
-                      src="https://images.pexels.com/photos/534220/pexels-photo-534220.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                      src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
                       className="md:h-245px w-full object-cover"
                       alt="house construction"
                     />
@@ -320,7 +320,7 @@ const Home = () => {
                   </div>
                   <div className="relative">
                     <img
-                      src="https://images.pexels.com/photos/534220/pexels-photo-534220.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                      src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
                       className="md:h-245px w-full object-cover"
                       alt="house construction"
                     />
