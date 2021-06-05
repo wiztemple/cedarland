@@ -78,84 +78,37 @@ const Home = () => {
     <>
       <div className="overflow-x-hidden bg-cream dark:bg-kiwi">
         <Navbar menuList={menuList} />
-        <section className="md:pt-60 md:pb-40 md:pl-20 pl-5 pr-5 pt-40" id="Top">
-          <div className="md:flex">
-            <div className="md:w-1/2">
-              <h1 className="md:text-7xl text-5xl md:leading-snug  font-semibold text-cedarland dark:text-sparkchoco capitalize">
+        <section className="md:pt-60 md:pb-20 md:px-20 px-5 pt-40" id="Top">
+          <div className="md:flex justify-center">
+            <div className="">
+              <h1 className="md:text-7xl text-4xl md:leading-snug  font-semibold text-cedarland dark:text-sparkchoco capitalize">
                 We
                 <span className="text-sparkchoco mx-2 bg-sparkchoco bg-opacity-10">Build</span>
                 your
-                <span className="text-sparkchoco block mx-2">Dreams</span>
+                <span className="text-sparkchoco mx-2">Dreams</span>
               </h1>
-              <p className="pt-8 dark:text-gray-300 text-gray-700 text-lg">We build everlasting homes for dear customers.</p>
-              <p className="dark:text-gray-300 text-gray-700 text-lg">We Promise you OPTIMUM designs at minimum cost</p>
-              <div className="flex items-center space-x-4 mt-10">
-                <button
-                  type="button"
-                  className="md:px-16 px-10 rounded py-4 bg-sparkchoco text-white hover:bg-cedarland"
-                >
-                  Lets talk
-                </button>
-                <Link
-                  to="/"
-                  className="border border-sparkchoco rounded text-sparkchoco hover:bg-sparkchoco hover:text-white py-4 md:px-12 px-6"
-                >
-                  View Projects
-                </Link>
+              <p className="pt-8 dark:text-gray-300 text-gray-700 md:text-lg md:text-center text-left">We build everlasting homes for dear customers.</p>
+              <p className="dark:text-gray-300 text-gray-700 md:text-lg md:text-center text-left">We Promise you OPTIMUM designs at minimum cost</p>
+              <div className="flex justify-center">
+                <div className="flex items-center space-x-4 mt-10">
+                  <button
+                    type="button"
+                    className="md:px-16 px-8 rounded py-4 bg-sparkchoco text-white hover:bg-cedarland"
+                  >
+                    Lets talk
+                  </button>
+                  <Link
+                    to="/"
+                    className="border border-sparkchoco rounded text-sparkchoco hover:bg-sparkchoco hover:text-white py-4 md:px-12 px-4"
+                  >
+                    View Projects
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </section>
         <section id="Section1">
-          <div className="md:px-20 px-5">
-            <h1 className="md:text-9xl text-5xl font-semibold text-gray-300 dark:text-gray-800 pt-20 md:pt-0">Our Projects</h1>
-            <h1 className="md:text-5xl text-4xl pt-5 font-bold text-sparkchoco dark:text-white">
-              Here are some projects that
-              <br />
-              we take real pride in
-            </h1>
-            <div className="md:flex md:space-x-6 space-y-6 md:space-y-0 pt-5 md:pt-12 md:h-562px w-full">
-              <div className="md:w-1/2 h-full">
-                <img className="md:h-full w-full rounded-lg object-cover" src="https://images.pexels.com/photos/2227832/pexels-photo-2227832.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="house construcion" />
-              </div>
-              <div className="md:w-1/2 h-full flex-col flex items-stretch">
-                <div className="md:flex md:space-x-6 space-y-6 md:space-y-0">
-                  <div className="">
-                    <img
-                      src="https://images.pexels.com/photos/534220/pexels-photo-534220.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                      className="md:h-245px w-full object-cover rounded-lg"
-                      alt="house construction"
-                    />
-                  </div>
-                  <div className="">
-                    <img
-                      src="https://images.pexels.com/photos/534220/pexels-photo-534220.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                      className="md:h-245px w-full object-cover rounded-lg"
-                      alt="house construction"
-                    />
-                  </div>
-                </div>
-                <div className="md:flex md:space-x-6 space-y-6 md:space-y-0 mt-6">
-                  <div className="">
-                    <img
-                      src="https://images.pexels.com/photos/53610/large-home-residential-house-architecture-53610.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                      className="md:h-245px w-full object-cover rounded-lg"
-                      alt="house construction"
-                    />
-                  </div>
-                  <div className="">
-                    <img
-                      src="https://images.pexels.com/photos/534220/pexels-photo-534220.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                      className="md:h-245px w-full object-cover rounded-lg"
-                      alt="house construction"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
           <div className="md:py-40 py-20">
             <div className="md:px-20 px-5">
               <h1 className="md:text-8xl text-5xl font-semibold text-gray-300 dark:text-gray-800 pb-5">Recently Completed</h1>
@@ -295,8 +248,101 @@ const Home = () => {
             </div>
           </div>
         </section>
+        <section>
+          <div className="md:px-20 px-5">
+            <h1 className="md:text-9xl text-5xl font-semibold md:leading-none text-gray-300 dark:text-gray-800 pt-20 md:pt-0">Design Prototypes</h1>
+            <h1 className="md:text-5xl text-4xl md:leading-tight pt-5 font-bold text-sparkchoco dark:text-white">
+              Here are some design prototypes/concepts
+              <br />
+              we take real pride in.
+            </h1>
+            <div className="md:flex md:space-x-6 space-y-6 md:space-y-0 pt-5 md:pt-12 md:h-562px w-full">
+              <div className="md:w-1/2 h-full">
+                <img className="md:h-full w-full object-cover" src="https://images.pexels.com/photos/2227832/pexels-photo-2227832.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="house construcion" />
+              </div>
+              <div className="md:w-1/2 h-full flex-col flex items-stretch">
+                <div className="md:flex md:space-x-6 space-y-6 md:space-y-0">
+                  <div className="relative">
+                    <img
+                      src="https://images.pexels.com/photos/534220/pexels-photo-534220.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                      className="md:h-245px w-full object-cover"
+                      alt="house construction"
+                    />
+                    <div className="absolute bg-lightestbrown right-3 w-220px rounded px-4 py-3 -bottom-3">
+                      <h1 className="text-lg text-sparkchoco font-semibold">Design Prototypes</h1>
+                      <div className="flex justify-between items-center">
+                        <Link to="/" className="text-xs bg-transparent text-slidertext1">33 design prototypes</Link>
+                        <Link to="/" className="bg-transparent">
+                          <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="#9593A4" />
+                          </svg>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="relative">
+                    <img
+                      src="https://images.pexels.com/photos/534220/pexels-photo-534220.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                      className="md:h-245px w-full object-cover"
+                      alt="house construction"
+                    />
+                    <div className="absolute bg-lightestbrown right-3 w-220px rounded px-4 py-3 -bottom-3">
+                      <h1 className="text-lg text-sparkchoco font-semibold">Design Prototypes</h1>
+                      <div className="flex justify-between items-center">
+                        <Link to="/" className="text-xs bg-transparent text-slidertext1">33 design prototypes</Link>
+                        <Link to="/" className="bg-transparent">
+                          <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="#9593A4" />
+                          </svg>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="md:flex md:space-x-6 space-y-6 md:space-y-0 mt-6">
+                  <div className="relative">
+                    <img
+                      src="https://images.pexels.com/photos/53610/large-home-residential-house-architecture-53610.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                      className="md:h-245px w-full object-cover"
+                      alt="house construction"
+                    />
+                    <div className="absolute bg-lightestbrown -right-3 w-220px rounded px-4 py-3 -bottom-3">
+                      <h1 className="text-lg text-sparkchoco font-semibold">Design Prototypes</h1>
+                      <div className="flex justify-between items-center">
+                        <Link to="/" className="text-xs bg-transparent text-slidertext1">33 design prototypes</Link>
+                        <Link to="/" className="bg-transparent">
+                          <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="#9593A4" />
+                          </svg>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="relative">
+                    <img
+                      src="https://images.pexels.com/photos/534220/pexels-photo-534220.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                      className="md:h-245px w-full object-cover"
+                      alt="house construction"
+                    />
+                    <div className="absolute bg-lightestbrown -right-3 w-220px rounded px-4 py-3 -bottom-3">
+                      <h1 className="text-lg text-sparkchoco font-semibold">Design Prototypes</h1>
+                      <div className="flex justify-between items-center">
+                        <Link to="/" className="text-xs bg-transparent text-slidertext1">33 design prototypes</Link>
+                        <Link to="/" className="bg-transparent">
+                          <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="#9593A4" />
+                          </svg>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section className="bg dark:bg-kiwi">
-          <div className="px-5 md:px-16 md:pb-40 pb-32 pt-32 md:pt-0">
+          <div className="px-5 md:px-16 md:py-40 py-32">
             <h1 className="md:text-9xl text-5xl font-semibold text-gray-400 dark:text-gray-800">Interior Design</h1>
             <h1 className="md:text-6xl font-semibold text-sparkchoco dark:text-gray-300 md:py-8 py-5">More on Interior Design</h1>
             <div className="relative">
@@ -325,7 +371,7 @@ const Home = () => {
                 swipeable
               >
                 {interiors?.map((interior) => (
-                  <div className="bg-white customshadow rounded-2xl dark:bg-gray-800">
+                  <div className="bg-white w-full customshadow rounded-2xl dark:bg-gray-800">
                     <img
                       className="md:h-350px w-full object-cover rounded-tl-2xl rounded-tr-2xl"
                       src={interior.image_url}
