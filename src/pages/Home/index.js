@@ -87,7 +87,7 @@ const Home = () => {
                 your
                 <span className="text-sparkchoco mx-2">Dreams</span>
               </h1>
-              <p className="pt-8 dark:text-gray-300 text-gray-700 md:text-lg md:text-center text-left">We build everlasting homes for dear customers.</p>
+              <p className="pt-8 dark:text-gray-300 text-gray-700 md:text-lg md:text-center text-left">We build everlasting homes for our dear customers.</p>
               <p className="dark:text-gray-300 text-gray-700 md:text-lg md:text-center text-left">We Promise you OPTIMUM designs at minimum cost</p>
               <div className="flex justify-center">
                 <div className="flex items-center space-x-4 mt-10">
