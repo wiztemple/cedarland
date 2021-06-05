@@ -44,7 +44,29 @@ const interiors = [
     link: '/blog/article/2',
   },
 ];
-
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5,
+    slidesToSlide: 5,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
+    slidesToSlide: 3,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+    slidesToSlide: 2,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+    slidesToSlide: 1,
+  },
+};
 const Home = () => {
   const { theme } = useContext(ThemeContext);
   // eslint-disable-next-line no-unused-vars
@@ -281,6 +303,7 @@ const Home = () => {
               <Carousel
                 additionalTransfrom={0}
                 arrows={false}
+                autoPlay
                 autoPlaySpeed={3000}
                 centerMode
                 className=""
@@ -295,32 +318,7 @@ const Home = () => {
                 minimumTouchDrag={80}
                 renderButtonGroupOutside
                 renderDotsOutside={false}
-                responsive={{
-                  desktop: {
-                    breakpoint: {
-                      max: 3000,
-                      min: 1024,
-                    },
-                    items: 3,
-                    partialVisibilityGutter: 30,
-                  },
-                  mobile: {
-                    breakpoint: {
-                      max: 464,
-                      min: 0,
-                    },
-                    items: 1,
-                    partialVisibilityGutter: 30,
-                  },
-                  tablet: {
-                    breakpoint: {
-                      max: 1024,
-                      min: 464,
-                    },
-                    items: 1,
-                    partialVisibilityGutter: 30,
-                  },
-                }}
+                responsive={responsive}
                 showDots={false}
                 sliderClass=""
                 slidesToSlide={1}
