@@ -56,7 +56,7 @@ const Navbar = ({ menuList }) => {
     <>
       <nav
         aria-label="primary"
-        className="w-full font-inter flex bg-white items-center justify-between flex-wrap px-5 dark:bg-gray-900 border border-white dark:border-gray-800 md:px-20 py-2 md:py-4 fixed shadow z-50"
+        className="w-full font-inter flex bg-cream dark:bg-kiwi items-center justify-between flex-wrap px-5 md:px-20 py-2 md:py-4 fixed z-50"
       >
 
         <div className="flex items-center flex-shrink-0 text-white">

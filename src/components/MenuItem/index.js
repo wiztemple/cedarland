@@ -40,7 +40,7 @@ const MenuItem = ({ itemKey, itemName, active }) => {
       href={`#${itemKey}`}
       onClick={handleClick}
       active={active}
-      className={`block mt-5 md:mt-0 md:ml-8 text-coregray text-sm hover:text-vividblue dark:text-white lg:inline-block font-medium ${active ? 'text-red-500' : 'text-coregray'}`}
+      className={`block font-inter mt-5 md:mt-0 md:ml-8 text-cedarland text-sm hover:text-vividblue dark:text-white lg:inline-block ${active ? 'text-sparkchoco' : 'text-coregray'}`}
       ariaLabel={`Scroll to ${itemKey}`}
     >
       {itemName}

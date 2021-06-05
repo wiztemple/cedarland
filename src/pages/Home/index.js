@@ -54,13 +54,40 @@ const Home = () => {
     <MenuItem itemName={value} itemKey={key} key={`menuitem_${i}`} active={value === activeItem} />);
   return (
     <>
-      <div className="overflow-x-hidden">
+      <div className="overflow-x-hidden bg-cream dark:bg-kiwi">
         <Navbar menuList={menuList} />
-        <h1 className="text-5xl font-semibold">Home</h1>
-        <section>
+        <section className="md:pt-60 md:pb-40 md:pl-20 pl-5 pr-5 pt-40" id="Top">
+          <div className="md:flex">
+            <div className="md:w-1/2">
+              <h1 className="md:text-7xl text-5xl md:leading-snug  font-semibold text-cedarland dark:text-sparkchoco capitalize">
+                We
+                <span className="text-sparkchoco mx-2 bg-sparkchoco bg-opacity-10">Build</span>
+                your
+                <span className="text-sparkchoco block mx-2">Dreams</span>
+              </h1>
+              <p className="pt-8 dark:text-gray-300 text-gray-700 text-lg">We build everlasting homes for dear customers.</p>
+              <p className="dark:text-gray-300 text-gray-700 text-lg">We Promise you OPTIMUM designs at minimum cost</p>
+              <div className="flex items-center space-x-4 mt-10">
+                <button
+                  type="button"
+                  className="md:px-16 px-10 rounded py-4 bg-sparkchoco text-white hover:bg-cedarland"
+                >
+                  Lets talk
+                </button>
+                <Link
+                  to="/"
+                  className="border border-sparkchoco rounded text-sparkchoco hover:bg-sparkchoco hover:text-white py-4 md:px-12 px-6"
+                >
+                  View Projects
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="Section1">
           <div className="md:px-20 px-5">
-            <h1 className="md:text-9xl text-5xl font-semibold text-snowgrey dark:text-gray-800">Our Projects</h1>
-            <h1 className="md:text-5xl text-4xl pt-5 md:pt-0 font-bold text-cedarlanddark: text-white">
+            <h1 className="md:text-9xl text-5xl font-semibold text-gray-300 dark:text-gray-800 pt-20 md:pt-0">Our Projects</h1>
+            <h1 className="md:text-5xl text-4xl pt-5 font-bold text-sparkchoco dark:text-white">
               Here are some projects that
               <br />
               we take real pride in
@@ -109,14 +136,12 @@ const Home = () => {
         <section>
           <div className="md:py-40 py-20">
             <div className="md:px-20 px-5">
-              <h1 className="md:text-8xl text-5xl font-semibold text-snowgrey dark:text-gray-800 pb-5 md:pb-10">Recently Completed</h1>
-              <div className="bg-lightestbrown md:w-840px dark:bg-kiwi md:px-12 md:py-12">
-                <h1 className="md:text-4xl text-2xl pb-6 md:pb-0 font-bold text-cedarland dark:text-white">
-                  Our recently
-                  <br />
-                  completed project
-                </h1>
-              </div>
+              <h1 className="md:text-8xl text-5xl font-semibold text-gray-300 dark:text-gray-800 pb-5">Recently Completed</h1>
+              <h1 className="md:text-5xl text-2xl pb-6 font-bold text-sparkchoco dark:text-white">
+                Our recently
+                <br />
+                completed project
+              </h1>
             </div>
             <div className="md:flex">
               <div className="md:w-1/2 md:flex">
@@ -249,9 +274,9 @@ const Home = () => {
           </div>
         </section>
         <section className="bg dark:bg-kiwi">
-          <div className="px-5 md:px-16 md:py-40 py-32">
-            <h1 className="md:text-9xl text-5xl font-semibold text-snowgrey dark:text-gray-800">Interior Design</h1>
-            <h1 className="md:text-6xl font-semibold text-gray dark:text-gray-300 md:py-8 py-5">More on Interior Design</h1>
+          <div className="px-5 md:px-16 md:pb-40 pb-32 pt-32 md:pt-0">
+            <h1 className="md:text-9xl text-5xl font-semibold text-gray-400 dark:text-gray-800">Interior Design</h1>
+            <h1 className="md:text-6xl font-semibold text-sparkchoco dark:text-gray-300 md:py-8 py-5">More on Interior Design</h1>
             <div className="relative">
               <Carousel
                 additionalTransfrom={0}

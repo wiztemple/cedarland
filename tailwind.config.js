@@ -14,6 +14,8 @@ module.exports = {
         lightestbrown: '#FDF8F8',
         slidertext1: ' #9593A4',
         gray1: '#A7A9AF',
+        cream: '#f4efe6',
+        darkgreen: '#59959c',
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
