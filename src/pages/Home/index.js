@@ -81,14 +81,14 @@ const Home = () => {
         <section className="md:pt-60 md:pb-20 md:px-20 px-5 pt-40" id="Top">
           <div className="md:flex justify-center">
             <div className="">
-              <h1 className="md:text-7xl text-4xl md:leading-snug  font-semibold text-cedarland dark:text-sparkchoco capitalize">
+              <h1 className="md:text-8xl tracking-wider text-4xl md:leading-snug  font-bold text-cedarland dark:text-sparkchoco capitalize">
                 We
                 <span className="text-sparkchoco mx-2 bg-sparkchoco bg-opacity-10">Build</span>
                 your
                 <span className="text-sparkchoco mx-2">Dreams</span>
               </h1>
-              <p className="pt-8 dark:text-gray-300 text-gray-700 md:text-lg md:text-center text-left">We build everlasting homes for our dear customers.</p>
-              <p className="dark:text-gray-300 text-gray-700 md:text-lg md:text-center text-left">We Promise you OPTIMUM designs at minimum cost</p>
+              <p className="pt-8 dark:text-gray-300 text-gray-700 md:text-xl md:text-center text-left">We build everlasting homes for our dear customers.</p>
+              <p className="dark:text-gray-300 text-gray-700 md:text-xl md:text-center text-left">We Promise you OPTIMUM designs at minimum cost</p>
               <div className="flex justify-center">
                 <div className="flex items-center space-x-4 mt-10">
                   <button
@@ -248,7 +248,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section>
+        <section className="dark:bg-kiwi2 md:py-40">
           <div className="md:px-20 px-5">
             <h1 className="md:text-9xl text-5xl font-semibold md:leading-none text-gray-300 dark:text-gray-800 pt-20 md:pt-0">Design Prototypes</h1>
             <h1 className="md:text-5xl text-4xl md:leading-tight pt-5 font-bold text-sparkchoco dark:text-white">

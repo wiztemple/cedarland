@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         kiwi: '#0e182a',
+        kiwi2: '#161a22',
         cedarland: '#603831',
         snowgrey: '#F0F1F2',
         milkgrey: '#FCF7F7',

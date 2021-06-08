@@ -6,11 +6,23 @@ import { ThemeProvider } from './context/themeContext';
 import Background from './components/Background';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
+import Projects from './pages/Projects';
+import About from './pages/About';
 
 const routes = [
   {
     path: '/',
     component: Home,
+    exact: true,
+  },
+  {
+    path: '/projects',
+    component: Projects,
+    exact: true,
+  },
+  {
+    path: '/about',
+    component: About,
     exact: true,
   },
 ].map(({ path, component: Component, exact }) => (
