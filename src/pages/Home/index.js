@@ -69,15 +69,11 @@ const responsive = {
 };
 const Home = () => {
   const { theme } = useContext(ThemeContext);
-  // eslint-disable-next-line no-unused-vars
   const [activeItem, setActiveItem] = useState('Home');
-  const menuList = Object.entries(menuItems).map(([key, value], i) =>
-    // console.log(key, value, i)
-    <MenuItem itemName={value} itemKey={key} key={`menuitem_${i}`} active={value === activeItem} />);
   return (
     <>
       <div className="overflow-x-hidden bg-cream dark:bg-kiwi">
-        <Navbar menuList={menuList} />
+        <Navbar />
         <section className="md:pt-60 md:pb-20 md:px-20 px-5 pt-40" id="Top">
           <div className="md:flex justify-center">
             <div className="">
@@ -131,11 +127,11 @@ const Home = () => {
                       <div className="link-holder">
                         <h1>Skyscrapers</h1>
                         <div className="flex justify-end">
-                          <a href="a" className="flex justify-center items-center bg-white h-10 w-10 rounded-full">
+                          <Link to="/projects" className="flex justify-center items-center bg-white h-10 w-10 rounded-full">
                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path fillRule="evenodd" clipRule="evenodd" d="M0.9375 7.5001C0.9375 7.37578 0.986886 7.25655 1.07479 7.16865C1.1627 7.08074 1.28193 7.03135 1.40625 7.03135H12.4622L9.51188 4.08198C9.42386 3.99396 9.37441 3.87458 9.37441 3.7501C9.37441 3.62563 9.42386 3.50625 9.51188 3.41823C9.59989 3.33021 9.71927 3.28076 9.84375 3.28076C9.96823 3.28076 10.0876 3.33021 10.1756 3.41823L13.9256 7.16823C13.9693 7.21177 14.0039 7.2635 14.0275 7.32045C14.0512 7.3774 14.0633 7.43845 14.0633 7.5001C14.0633 7.56176 14.0512 7.62281 14.0275 7.67976C14.0039 7.73671 13.9693 7.78844 13.9256 7.83198L10.1756 11.582C10.0876 11.67 9.96823 11.7194 9.84375 11.7194C9.71927 11.7194 9.59989 11.67 9.51188 11.582C9.42386 11.494 9.37441 11.3746 9.37441 11.2501C9.37441 11.1256 9.42386 11.0062 9.51188 10.9182L12.4622 7.96885H1.40625C1.28193 7.96885 1.1627 7.91947 1.07479 7.83156C0.986886 7.74365 0.9375 7.62442 0.9375 7.5001V7.5001Z" fill="#603831" />
                             </svg>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -150,11 +146,11 @@ const Home = () => {
                       <div className="link-holder">
                         <h1>Duplex</h1>
                         <div className="flex justify-end">
-                          <a href="a" className="flex justify-center items-center bg-white h-10 w-10 rounded-full">
+                          <Link to="/projects" className="flex justify-center items-center bg-white h-10 w-10 rounded-full">
                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path fillRule="evenodd" clipRule="evenodd" d="M0.9375 7.5001C0.9375 7.37578 0.986886 7.25655 1.07479 7.16865C1.1627 7.08074 1.28193 7.03135 1.40625 7.03135H12.4622L9.51188 4.08198C9.42386 3.99396 9.37441 3.87458 9.37441 3.7501C9.37441 3.62563 9.42386 3.50625 9.51188 3.41823C9.59989 3.33021 9.71927 3.28076 9.84375 3.28076C9.96823 3.28076 10.0876 3.33021 10.1756 3.41823L13.9256 7.16823C13.9693 7.21177 14.0039 7.2635 14.0275 7.32045C14.0512 7.3774 14.0633 7.43845 14.0633 7.5001C14.0633 7.56176 14.0512 7.62281 14.0275 7.67976C14.0039 7.73671 13.9693 7.78844 13.9256 7.83198L10.1756 11.582C10.0876 11.67 9.96823 11.7194 9.84375 11.7194C9.71927 11.7194 9.59989 11.67 9.51188 11.582C9.42386 11.494 9.37441 11.3746 9.37441 11.2501C9.37441 11.1256 9.42386 11.0062 9.51188 10.9182L12.4622 7.96885H1.40625C1.28193 7.96885 1.1627 7.91947 1.07479 7.83156C0.986886 7.74365 0.9375 7.62442 0.9375 7.5001V7.5001Z" fill="#603831" />
                             </svg>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -171,11 +167,11 @@ const Home = () => {
                       <div className="link-holder">
                         <h1>Bungalows</h1>
                         <div className="flex justify-end">
-                          <a href="a" className="flex justify-center items-center bg-white h-10 w-10 rounded-full">
+                          <Link to="/projects" className="flex justify-center items-center bg-white h-10 w-10 rounded-full">
                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path fillRule="evenodd" clipRule="evenodd" d="M0.9375 7.5001C0.9375 7.37578 0.986886 7.25655 1.07479 7.16865C1.1627 7.08074 1.28193 7.03135 1.40625 7.03135H12.4622L9.51188 4.08198C9.42386 3.99396 9.37441 3.87458 9.37441 3.7501C9.37441 3.62563 9.42386 3.50625 9.51188 3.41823C9.59989 3.33021 9.71927 3.28076 9.84375 3.28076C9.96823 3.28076 10.0876 3.33021 10.1756 3.41823L13.9256 7.16823C13.9693 7.21177 14.0039 7.2635 14.0275 7.32045C14.0512 7.3774 14.0633 7.43845 14.0633 7.5001C14.0633 7.56176 14.0512 7.62281 14.0275 7.67976C14.0039 7.73671 13.9693 7.78844 13.9256 7.83198L10.1756 11.582C10.0876 11.67 9.96823 11.7194 9.84375 11.7194C9.71927 11.7194 9.59989 11.67 9.51188 11.582C9.42386 11.494 9.37441 11.3746 9.37441 11.2501C9.37441 11.1256 9.42386 11.0062 9.51188 10.9182L12.4622 7.96885H1.40625C1.28193 7.96885 1.1627 7.91947 1.07479 7.83156C0.986886 7.74365 0.9375 7.62442 0.9375 7.5001V7.5001Z" fill="#603831" />
                             </svg>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -194,11 +190,11 @@ const Home = () => {
                       <div className="link-holder">
                         <h1>Office Complex</h1>
                         <div className="flex justify-end">
-                          <a href="a" className="flex justify-center items-center bg-white h-10 w-10 rounded-full">
+                          <Link to="/projects" className="flex justify-center items-center bg-white h-10 w-10 rounded-full">
                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path fillRule="evenodd" clipRule="evenodd" d="M0.9375 7.5001C0.9375 7.37578 0.986886 7.25655 1.07479 7.16865C1.1627 7.08074 1.28193 7.03135 1.40625 7.03135H12.4622L9.51188 4.08198C9.42386 3.99396 9.37441 3.87458 9.37441 3.7501C9.37441 3.62563 9.42386 3.50625 9.51188 3.41823C9.59989 3.33021 9.71927 3.28076 9.84375 3.28076C9.96823 3.28076 10.0876 3.33021 10.1756 3.41823L13.9256 7.16823C13.9693 7.21177 14.0039 7.2635 14.0275 7.32045C14.0512 7.3774 14.0633 7.43845 14.0633 7.5001C14.0633 7.56176 14.0512 7.62281 14.0275 7.67976C14.0039 7.73671 13.9693 7.78844 13.9256 7.83198L10.1756 11.582C10.0876 11.67 9.96823 11.7194 9.84375 11.7194C9.71927 11.7194 9.59989 11.67 9.51188 11.582C9.42386 11.494 9.37441 11.3746 9.37441 11.2501C9.37441 11.1256 9.42386 11.0062 9.51188 10.9182L12.4622 7.96885H1.40625C1.28193 7.96885 1.1627 7.91947 1.07479 7.83156C0.986886 7.74365 0.9375 7.62442 0.9375 7.5001V7.5001Z" fill="#603831" />
                             </svg>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -213,11 +209,11 @@ const Home = () => {
                       <div className="link-holder">
                         <h1>Shopping Complex</h1>
                         <div className="flex justify-end">
-                          <a href="a" className="flex justify-center items-center bg-white h-10 w-10 rounded-full">
+                          <Link to="/projects" className="flex justify-center items-center bg-white h-10 w-10 rounded-full">
                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path fillRule="evenodd" clipRule="evenodd" d="M0.9375 7.5001C0.9375 7.37578 0.986886 7.25655 1.07479 7.16865C1.1627 7.08074 1.28193 7.03135 1.40625 7.03135H12.4622L9.51188 4.08198C9.42386 3.99396 9.37441 3.87458 9.37441 3.7501C9.37441 3.62563 9.42386 3.50625 9.51188 3.41823C9.59989 3.33021 9.71927 3.28076 9.84375 3.28076C9.96823 3.28076 10.0876 3.33021 10.1756 3.41823L13.9256 7.16823C13.9693 7.21177 14.0039 7.2635 14.0275 7.32045C14.0512 7.3774 14.0633 7.43845 14.0633 7.5001C14.0633 7.56176 14.0512 7.62281 14.0275 7.67976C14.0039 7.73671 13.9693 7.78844 13.9256 7.83198L10.1756 11.582C10.0876 11.67 9.96823 11.7194 9.84375 11.7194C9.71927 11.7194 9.59989 11.67 9.51188 11.582C9.42386 11.494 9.37441 11.3746 9.37441 11.2501C9.37441 11.1256 9.42386 11.0062 9.51188 10.9182L12.4622 7.96885H1.40625C1.28193 7.96885 1.1627 7.91947 1.07479 7.83156C0.986886 7.74365 0.9375 7.62442 0.9375 7.5001V7.5001Z" fill="#603831" />
                             </svg>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -234,11 +230,11 @@ const Home = () => {
                       <div className="link-holder">
                         <h1>Hotels</h1>
                         <div className="flex justify-end">
-                          <a href="a" className="flex justify-center items-center bg-white h-10 w-10 rounded-full">
+                          <Link to="/projects" className="flex justify-center items-center bg-white h-10 w-10 rounded-full">
                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path fillRule="evenodd" clipRule="evenodd" d="M0.9375 7.5001C0.9375 7.37578 0.986886 7.25655 1.07479 7.16865C1.1627 7.08074 1.28193 7.03135 1.40625 7.03135H12.4622L9.51188 4.08198C9.42386 3.99396 9.37441 3.87458 9.37441 3.7501C9.37441 3.62563 9.42386 3.50625 9.51188 3.41823C9.59989 3.33021 9.71927 3.28076 9.84375 3.28076C9.96823 3.28076 10.0876 3.33021 10.1756 3.41823L13.9256 7.16823C13.9693 7.21177 14.0039 7.2635 14.0275 7.32045C14.0512 7.3774 14.0633 7.43845 14.0633 7.5001C14.0633 7.56176 14.0512 7.62281 14.0275 7.67976C14.0039 7.73671 13.9693 7.78844 13.9256 7.83198L10.1756 11.582C10.0876 11.67 9.96823 11.7194 9.84375 11.7194C9.71927 11.7194 9.59989 11.67 9.51188 11.582C9.42386 11.494 9.37441 11.3746 9.37441 11.2501C9.37441 11.1256 9.42386 11.0062 9.51188 10.9182L12.4622 7.96885H1.40625C1.28193 7.96885 1.1627 7.91947 1.07479 7.83156C0.986886 7.74365 0.9375 7.62442 0.9375 7.5001V7.5001Z" fill="#603831" />
                             </svg>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -271,8 +267,8 @@ const Home = () => {
                     <div className="absolute bg-lightestbrown right-3 w-220px rounded px-4 py-3 -bottom-3">
                       <h1 className="text-lg text-sparkchoco font-semibold">Design Prototypes</h1>
                       <div className="flex justify-between items-center">
-                        <Link to="/" className="text-xs bg-transparent text-slidertext1">33 design prototypes</Link>
-                        <Link to="/" className="bg-transparent">
+                        <Link to="/projects" className="text-xs bg-transparent text-slidertext1">33 design prototypes</Link>
+                        <Link to="/projects" className="bg-transparent">
                           <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="#9593A4" />
                           </svg>

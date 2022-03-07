@@ -9,7 +9,7 @@ import ThemeButton from '../ThemeButton';
 const menuItems = {};
 
 // eslint-disable-next-line react/prop-types
-const Navbar = ({ menuList }) => {
+const Navbar = () => {
   const { theme } = useContext(ThemeContext);
   const [navbarOpen, setNavbarOpen] = useState(false);
 
@@ -91,7 +91,28 @@ const Navbar = ({ menuList }) => {
         </div>
         <div className={`w-full flex-grow lg:flex lg:items-center lg:w-auto ${navbarOpen ? ' block' : ' hidden'}`}>
           <div className="lg:flex-grow  md:flex items-center md:ml-16">
-            {menuList}
+            {/* {menuList} */}
+            <Link
+              to="/"
+              className="block font-inter mt-5 md:mt-0 md:ml-8 text-cedarland text-sm hover:text-vividblue dark:text-white lg:inline-block"
+              ariaLabel="Home"
+            >
+              Home
+            </Link>
+            <Link
+              to="/projects"
+              className="block font-inter mt-5 md:mt-0 md:ml-8 text-cedarland text-sm hover:text-vividblue dark:text-white lg:inline-block"
+              ariaLabel="Home"
+            >
+              Projects
+            </Link>
+            <Link
+              to="/about"
+              className="block font-inter mt-5 md:mt-0 md:ml-8 text-cedarland text-sm hover:text-vividblue dark:text-white lg:inline-block"
+              ariaLabel="Home"
+            >
+              About
+            </Link>
           </div>
           <div className="md:flex items-center mt-4 xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0">
             <div
